@@ -70,3 +70,4 @@ for ev in data["recent_activity"]:
 ```
 ### 3. UML Sequence Diagram
 
+![MicroserviceA](https://github.com/user-attachments/assets/6cc706db-f49c-465c-af35-76b613c6700a)
