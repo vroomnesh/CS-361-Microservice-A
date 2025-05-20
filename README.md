@@ -18,21 +18,21 @@ This microservice is a recent activity tracker, that provides weekly listening a
 import http.client
 import json
 
-## 1) Open connection
+### 1) Open connection
 conn = http.client.HTTPConnection("localhost", 8080)
 
-## 2) Build path with query parameters
+### 2) Build path with query parameters
 params = "user_id=1234&week_start=2025-05-01&media_type=song"
 path = f"/activity?{params}"
 
-## 3) Send GET request
+### 3) Send GET request
 conn.request("GET", path)
 
-## 4) Get the response
+### 4) Get the response
 response = conn.getresponse()
 print(response.status, response.reason)  # e.g. "200 OK"
 
-## 5) Read raw body
+### 5) Read raw body
 raw_body = response.read().decode("utf-8")
 conn.close()
 
@@ -59,7 +59,7 @@ Each element of `recent_activity` has:
 
 import json
 
-## Suppose `raw_body` is the response body from your GET /activity call
+### Suppose `raw_body` is the response body from your GET /activity call
 data = json.loads(raw_body)
 
 print("Total hours:", data["total_hours"])
