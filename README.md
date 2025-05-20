@@ -70,27 +70,3 @@ for ev in data["recent_activity"]:
 ```
 ### 3. UML Sequence Diagram
 
-sequenceDiagram
-    autonumber
-    participant Client as Program making request
-    participant Service as ActivityService
-    participant DB as DataStore
-
-    note left of Client
-      • user_id (required)  
-      • week_start (required)  
-      • media_type (optional)
-    end note
-
-    Client->>Service: GET /activity?user_id=1234&week_start=2025-05-01&media_type=song
-    Service->>DB: queryActivities(user_id, start, end, media_type)
-    DB-->>Service: return activityRecords
-    Service->>Service: calculate total_hours  
-    Service->>Service: select up to 5 recent events
-    Service-->>Client: 200 OK + JSON { total_hours, recent_activity }
-
-    note right of Service
-      • filters by media_type if provided  
-      • orders recent_activity by timestamp desc  
-    end note
-
