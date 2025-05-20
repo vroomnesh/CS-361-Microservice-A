@@ -38,7 +38,7 @@ raw_body = response.read().decode("utf-8")
 conn.close()
 ```
 
-### 1. How to PROGRAMMATICALLY REQUEST Data
+### 2. How to PROGRAMMATICALLY RECEIVE Data
 
 The service returns JSON with exactly two top‑level fields:
 
