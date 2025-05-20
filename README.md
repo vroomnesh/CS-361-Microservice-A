@@ -58,10 +58,6 @@ Each element of `recent_activity` has:
 
 ### Example RECEIVE (Python)
 
-import json
-
-### Suppose `raw_body` is the response body from your GET /activity call
-
 ```python
 import json
 
