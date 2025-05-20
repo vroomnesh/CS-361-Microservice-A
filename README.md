@@ -62,7 +62,7 @@ import json
 ### Suppose `raw_body` is the response body from your GET /activity call
 data = json.loads(raw_body)
 
-print("Total hours:", data["total_hours"])
+print("Total hours:", data["total_hours"])  
 for ev in data["recent_activity"]:
     print(f"{ev['timestamp']}: {ev['title']} ({ev['type']}) by {ev['artist']}")
 
