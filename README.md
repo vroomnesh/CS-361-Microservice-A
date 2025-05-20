@@ -6,12 +6,12 @@ This microservice is a recent activity tracker, that provides weekly listening a
 
 ### 1. How to PROGRAMMATICALLY REQUEST Data
 
-**HTTP Method**: `GET`
-**URL**: `/activity`
-**Query Parameters**:
-  `user_id` (string, **required**) — user's unique ID
-  `week_start` (string, **required**) — ISO date `YYYY-MM-DD` marking the start of the 7‑day window 
-  `media_type` (string, *optional*, `"song"` or `"podcast"`)
+- **HTTP Method**: `GET`
+- **URL**: `/activity`
+- **Query Parameters**:
+  - `user_id` (string, **required**) — user's unique ID
+  - `week_start` (string, **required**) — ISO date `YYYY-MM-DD` marking the start of the 7‑day window 
+  - `media_type` (string, *optional*, `"song"` or `"podcast"`)
 
 ### Example REQUEST (Python)
 
