@@ -15,7 +15,7 @@ This microservice is a recent activity tracker, that provides weekly listening a
 
 ### Example REQUEST (Python)
 
-import http.client
+import http.client  
 import json
 
 ### 1) Open connection
