@@ -22,7 +22,7 @@ import json
 conn = http.client.HTTPConnection("localhost", 8080)
 
 ### 2) Build path with query parameters
-params = "user_id=1234&week_start=2025-05-01&media_type=song"
+params = "user_id=1234&week_start=2025-05-01&media_type=song"  
 path = f"/activity?{params}"
 
 ### 3) Send GET request
@@ -33,7 +33,7 @@ response = conn.getresponse()
 print(response.status, response.reason)  # e.g. "200 OK"
 
 ### 5) Read raw body
-raw_body = response.read().decode("utf-8")
+raw_body = response.read().decode("utf-8")  
 conn.close()
 
 
